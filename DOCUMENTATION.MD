@@ -1,5 +1,7 @@
 # HoloEasy - Documentation
 
+[![](https://jitpack.io/v/denmeh/holoeasy.svg)](https://jitpack.io/#denmeh/holoeasy)
+
 ## Introduction
 
 HoloEasy is an open-source library for creating holograms in Minecraft that uses PacketEvents to handle packets. This allows for greater performance as the server does not have to manage these entities.
@@ -26,16 +28,16 @@ HoloEasy is an open-source library for creating holograms in Minecraft that uses
 2. Add the dependency to your `build.gradle`:
    ```groovy
    dependencies {
-      implementation 'com.github.unldenis.holoeasy:holoeasy-core:5.0.0-rc.1'
+      implementation 'com.github.denmeh.holoeasy:holoeasy-core:5.0.0-rc.2'
    }
    ```
    
     Or if you are using Maven, add the following to your `pom.xml`:
     ```xml
     <dependency>
-        <groupId>com.github.unldenis.holoeasy</groupId>
+        <groupId>com.github.denmeh.holoeasy</groupId>
         <artifactId>holoeasy-core</artifactId>
-        <version>5.0.0-rc.1</version>
+        <version>5.0.0-rc.2</version>
     </dependency>
     ```
    
@@ -101,7 +103,7 @@ To efficiently manage multiple holograms, you can use hologram pools.
 This allows you to create and manage groups of holograms that can be shown or hidden together and cleaned up automatically.
 
 ```java
-IHologramPool<MyHologram> pool = holoEasy.startPool(60, true);
+IHologramPool<MyHologram> pool = holoEasy.startPool(60, true, false);
 ```
 
 ### Adding Holograms to a Pool
